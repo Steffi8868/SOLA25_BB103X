@@ -551,9 +551,7 @@ view(df_TCGA_selct)
 
 #Select relevant immune cells
 df_immune_selct <- df_combined %>% 
-  dplyr::select(`Macrophages M2`,`Mast cells resting`,
-                `T cells CD4 memory resting`,`Macrophages M1`,
-                `Immune Activity Score`,`SampleID`)
+  dplyr::select(`Immune Activity Score`,`SampleID`)
 view(df_immune_selct)
 
 # Merge the clinical data with the immune deconvolution data
