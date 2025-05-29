@@ -581,9 +581,7 @@ for (sub in unique(df_merged$PAM50)) {
     # Subtyping
     # Response to therapy
     # IAS
-df_cox <- df_merged %>% dplyr::select(`Macrophages M2`,`Mast cells resting`,
-                                      `T cells CD4 memory resting`,
-                                      `Macrophages M1`,
+df_cox <- df_merged %>% dplyr::select(`Immune Activity Score`,
                                       `Lymph nodes examined positive`,
                                       `Nottingham prognostic index`,`Cellularity`,
                                       `ER status measured by IHC`,
@@ -591,7 +589,7 @@ df_cox <- df_merged %>% dplyr::select(`Macrophages M2`,`Mast cells resting`,
                                       `Hormone Therapy`,`Age at Diagnosis`,
                                       `Overall Survival (Months)`,
                                       `Overall Survival Status`,`PAM50`,
-                                      `Radio Therapy`,`Immune Activity Score`)
+                                      `Radio Therapy`)
 
 # Rename variables for convenience
 df_cox <- df_cox %>%
